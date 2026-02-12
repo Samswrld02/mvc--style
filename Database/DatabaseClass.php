@@ -1,0 +1,43 @@
+<?php
+
+//import right config for database
+require_once "config/config.php";
+
+
+class Database
+{
+    private static $connection;
+    private static $dsn;
+    private static $user;
+    private static $pw;
+    private static $options;
+
+    public function __construct($dsn, $user, $pw, $options)
+    {
+        self::$dsn = $dsn;
+        self::$user = $user;
+        self::$pw = $pw;
+        self::$options = $options;
+    }
+
+    public static function createConnection()
+    {
+        //singleton pattern, only create on connection
+        if (self::$connection == null) {
+            try {
+                self::$connection = new PDO(self::$dsn, self::$user, self::$pw, self::$options);
+            } catch (PDOException $e) {
+                header("Content-Type: application/json");
+                echo json_encode($e->getMessage());
+                exit;
+            }
+        }
+        return self::$connection;
+    }
+}
+
+
+//set data from config 
+new Database($dsn, $user, $pw, $options);
+
+
