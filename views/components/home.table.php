@@ -1,6 +1,3 @@
-<?php 
-    $databaseArray = [["title" => "test", "rating" => 1] ,["title" => "the good place", "rating" => 4.5]];
-?>
 
 <table>
     <tr>
