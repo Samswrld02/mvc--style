@@ -1,11 +1,10 @@
 <?php
-require_once "./Database/DatabaseClass.php";
-require_once "./controllers/homeController.php";
 
-//create database instance
-$conn = Database::createConnection();
+require_once "./Router/routerController.php";
+require_once "./Router/config.php";
 
-$test = new HomeController($conn);
+//check if route exists
+if ($test->handleRequest()) {
+    var_dump($test->handleRequest()->showAll());
+}
 
-//do this based on route and map controller class and function to it.
-$test->showAll();
