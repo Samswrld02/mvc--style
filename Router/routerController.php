@@ -2,7 +2,7 @@
 
 require_once "./Database/DatabaseClass.php";
 require_once "./controllers/homeController.php";
-require_once "./Router/config.php";
+// require_once "./Router/config.php";
 
 class Router {
     private $conn;

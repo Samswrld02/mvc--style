@@ -2,7 +2,7 @@
 
 require_once "./Router/routerController.php";
 require_once "./Router/config.php";
-require_once "./Models/seriesModel.php";
+// require_once "./Models/seriesModel.php";
 
 
 //inject dependancy into class

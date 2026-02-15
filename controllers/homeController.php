@@ -1,4 +1,5 @@
 <?php
+require_once "./Models/seriesModel.php";
 
 $test = "hello lmao";
 
