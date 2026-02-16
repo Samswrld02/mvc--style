@@ -27,7 +27,7 @@
                 <tr>
                     <td class = ><?= $row['title'] ?></td>
                     <td><?= $row['length_in_minutes'] ?></td>
-                    <td><a href = "home/details/series/<?= $row['id'] ?>">Details</a></td>
+                    <td><a href = "home/details/movies/<?= $row['id'] ?>">Details</a></td>
                 </tr>
             <?php endforeach ?>
     </table>
