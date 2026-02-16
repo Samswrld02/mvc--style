@@ -29,9 +29,11 @@ a:hover {
 }
 
 .buttonReturn {
-    display: flex;
-    justify-content: right;
-    margin-right: 30vw;
+    margin-left: 70vw;
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: grey;
 }
 
 .descriptionHeader {
@@ -42,4 +44,8 @@ a:hover {
     padding: 0.5rem;
     outline-style: solid;
     outline-color: yellow;
+}
+.homeContainer {
+    display: flex;
+    flex-direction: column;
 }

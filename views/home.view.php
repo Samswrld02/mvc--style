@@ -1,10 +1,10 @@
 
     
-    
+    <div class="homeContainer">
     <table>
         <tr>
             <th>Title</th>
-            <th>Rating</th>\
+            <th>Rating</th>
             <th>Meer info</th>
         </tr>
         <h1>Series</h1>
@@ -31,3 +31,4 @@
                 </tr>
             <?php endforeach ?>
     </table>
+    </div>
