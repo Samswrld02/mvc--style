@@ -4,7 +4,7 @@
         <?php foreach ($results[0] as $key => $value) :?>
             <?php if ($key != "id") : ?>
                 <label for= "<?=$key?>"><?=$key?></label>
-                <input id ="<?=$key?>" name = "<?=$key?>">
+                <input id ="<?=$key?>" name = "<?=$key?>" value ="<?= htmlspecialchars($value) ?>">
             <?php endif ?>
         <?php endforeach?>
         <button type="submit" id="saveButton">Save</button>
