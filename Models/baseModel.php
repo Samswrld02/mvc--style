@@ -97,6 +97,48 @@ class baseModel {
 
         return ["result" => "update successful"];
     }
+
+    public function showAddForm($resource) {
+        $conn = $this->conn;
+        
+
+        $sql = "SELECT * FROM $resource";
+
+        $stmt = $conn->prepare($sql);
+
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+
+    }
+
+    public function add($resource, $data) {
+        $conn = $this->conn;
+
+        $columns = [];
+        $values = [];
+
+        foreach ($data as $key => $value) {
+            $string = "$key";
+            array_push($columns, $string);
+            array_push($values, ":$key");
+        }
+        var_dump($columns);
+        $valueStatement = implode(", ", $values);
+        $columnStatement = implode(", ", $columns);
+
+        echo $valueStatement;
+        
+
+
+        $sql = "INSERT INTO $resource ($columnStatement) VALUES ($valueStatement)";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($data);
+        $location = URLROOT;
+
+        header("Location: $location/home");
+    }
 }
 
 

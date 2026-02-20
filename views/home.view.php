@@ -25,7 +25,9 @@
                 <td><a href = "<?=  URLROOT ?>/home/details/series/<?= $row['id'] ?>">Details</a></td>
             </tr>
         <?php endforeach ?>
+        
     </table>
+    <a class="addButton" href="<?= URLROOT ?>/add/show/series">Add new Series</a>
     <h1>Movies</h1>
     <table>
             <tr>
@@ -40,5 +42,7 @@
                     <td><a href = "<?=  URLROOT ?>/home/details/movies/<?= $row['id'] ?>">Details</a></td>
                 </tr>
             <?php endforeach ?>
+            
     </table>
+    <a class="addButton" href="<?= URLROOT ?>/add/show/movies">Add new Movie</a>
     </div>

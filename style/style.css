@@ -56,6 +56,7 @@ a:hover {
 .homeContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .editForm {
@@ -68,3 +69,10 @@ a:hover {
     justify-content: center;
 }
 
+
+.addButton {
+    background-color: grey;
+    border: solid 4px black;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
