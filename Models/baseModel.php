@@ -87,7 +87,7 @@ class baseModel {
 
         $dataArray['id'] = intval($id);
 
-        var_dump($dataArray);
+        // var_dump($dataArray);
        
 
         $sql = "UPDATE $resource SET $preparedStatement WHERE id = :id";

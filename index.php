@@ -33,7 +33,7 @@ if ($request) {
     require_once "./views/components/BasicViewLayout/header.php";
     $controller->$method($resource, $id, $dir);
     require_once "./views/components/BasicViewLayout/footer.php";
-    } catch (Exception $e) {
+    } catch (throwable $e) {
         echo $e->getMessage();
     }
 }
