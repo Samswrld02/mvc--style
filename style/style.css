@@ -90,3 +90,7 @@ a:hover {
     flex-direction: column;
     row-gap: 0.5rem;
 }
+
+.LoginMessage {
+    text-align: center;
+}

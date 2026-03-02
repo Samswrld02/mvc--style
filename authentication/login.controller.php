@@ -24,12 +24,12 @@ class Login {
             
             if ($loginAuthentic) {
                 $_SESSION['user'] = $_POST['username'];
+                unset($_SESSION['message']);
                 header("Location: " . URLROOT . "/home");
             } else {
-                // if (isset($_SESSION['user'])) {
-                //     unset($_SESSION['user']);
-                    header("Location: " . URLROOT . "/");
-                // }
+                //dislay error message
+                $_SESSION['message'] = "INVALID LOGIN!";
+                header("Location: " . URLROOT . "/");
             }
         }
     
